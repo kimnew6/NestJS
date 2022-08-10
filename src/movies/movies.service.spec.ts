@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { isNotIn } from 'class-validator';
 import { MoviesService } from './movies.service';
 
 describe('MoviesService', () => {
@@ -14,5 +15,9 @@ describe('MoviesService', () => {
 
   it('should be defined', () => {
     expect(service).toBeDefined();
+  });
+
+  it('should be 5', () => {
+    expect(2 + 3).toEqual(5);
   });
 });
